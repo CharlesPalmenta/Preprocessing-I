@@ -148,13 +148,17 @@ table {
 }
 .mediaBox {
   width: 30rem;
-  height: 30rem;
+  height: 35rem;
   box-shadow: 0.5rem 0.5rem 1.2rem black;
   border-radius: 3rem;
 }
 .media {
   display: flex;
   flex-direction: column;
+}
+.boxDisplay {
+  display: flex;
+  justify-content: space-between;
 }
 @font-face {
   font-family: 'Lobster';
@@ -171,6 +175,8 @@ html {
   font-size: 62.5%;
   background-image: url(/images/james-pond-riEYPSKxoTw-unsplash.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 html body {
   width: 90%;
@@ -207,13 +213,28 @@ html body {
   color: #a50909;
   padding: 1%;
 }
-.topIntro p {
+.topIntro .personal {
   font-family: 'Oswald';
   font-size: 2rem;
   text-align: center;
   padding: 1%;
   padding-bottom: 10rem;
   padding-top: 2rem;
+}
+@media (max-width: 500px) {
+  .topIntro .introPic {
+    max-width: 30rem;
+    border-radius: 30rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem black;
+  }
+  .topIntro h1 {
+    width: 30rem;
+    text-align: center;
+    font-size: 4rem;
+  }
+  .topIntro .personal {
+    display: none;
+  }
 }
 .skillsBox {
   display: flex;
@@ -229,7 +250,7 @@ html body {
 @media (max-width: 500px) {
   .skillsBox .contentBox {
     width: 30rem;
-    height: 30rem;
+    height: 35rem;
     box-shadow: 0.5rem 0.5rem 1.2rem black;
     border-radius: 3rem;
   }
@@ -248,7 +269,21 @@ html body {
   text-align: center;
   padding: 1%;
   margin: 1rem;
-  padding: 5rem;
+  padding: 0.5rem;
+}
+.skillsBox .contentBox .button1 {
+  width: 15rem;
+  background-color: #ccc5c5;
+  font-family: 'Oswald';
+  font-size: 2rem;
+  text-align: center;
+  padding: 1%;
+  border: 2px solid #a50909;
+  border-radius: 1.2rem;
+}
+.skillsBox .contentBox .button1:hover {
+  background-color: #a50909;
+  color: white;
 }
 .skillsBox .contentBox li {
   padding: 1rem;
@@ -261,7 +296,76 @@ html body {
   border-radius: 6rem;
 }
 @media (max-width: 500px) {
+  .skillsBox .skillPic {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 35rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem black;
+    border-radius: 3rem;
+  }
+}
+@media (max-width: 500px) {
   .skillsBox {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.workBox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15rem;
+}
+.workBox .contentWork {
+  background-color: #ccc5c5;
+  width: 60rem;
+  height: 30rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 6rem;
+}
+@media (max-width: 500px) {
+  .workBox .contentWork {
+    width: 30rem;
+    height: 35rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem black;
+    border-radius: 3rem;
+  }
+}
+.workBox .contentWork h1 {
+  font-family: 'Lobster';
+  font-size: 3rem;
+  text-align: center;
+  color: #a50909;
+}
+.workBox .contentWork .work {
+  text-align: center;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+}
+.workBox .contentWork span {
+  font-family: 'Oswald';
+  color: #7c6d34;
+}
+.workBox .workPic {
+  width: 60rem;
+  height: 30rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 6rem;
+}
+@media (max-width: 500px) {
+  .workBox .workPic {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 35rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem black;
+    border-radius: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  .workBox {
     display: flex;
     flex-direction: column;
   }
