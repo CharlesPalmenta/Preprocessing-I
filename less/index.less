@@ -56,6 +56,38 @@ table {
 @textcolor: #a50909;
 @shadow: 0.5rem 0.5rem 1.2rem black;
 
+.heading {
+	font-size: 3rem;
+	text-align: center;
+}
+
+.paragraph {
+	font-family: 'Oswald';
+	font-size: 2rem;
+	text-align: center;
+	padding: 1%;
+}
+
+.boxWidth {
+	width: 60rem;
+	height: 30rem;
+	box-shadow: @shadow;
+	border-radius: 6rem;
+}
+
+.mediaBox {
+	width: 30rem;
+	height: 30rem;
+	box-shadow: @shadow;
+	border-radius: 3rem;
+}
+
+.media {
+	display: flex;
+	flex-direction: column;
+}
+
+
 @font-face {
 	font-family: 'Lobster';
 	src: url('/fonts/lobster-regular-webfont.woff2') format('woff2'), url('/fonts/lobster-regular-webfont.woff') format('woff');
@@ -96,12 +128,14 @@ html {
 		color: @textcolor;
 
 	}
+
 }
 
 .topIntro {
-	width: 50rem;
+	width: 60rem;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	
 	.introPic {
 		max-width: 50rem;
@@ -111,19 +145,62 @@ html {
 
 	h1 {
 		font-family: 'Lobster';
-		font-size: 3rem;
+		font-size: 5rem;
 		text-align: center;
 		color: @textcolor;
 		padding: 1%;
 	}
 
 	p {
-		font-family: 'Oswald';
-		font-size: 1.5rem;
-		text-align: center;
-		padding: 1%;
+		.paragraph();
+		padding-bottom: 10rem;
+		padding-top: 2rem;
 	}
 }
+.skillsBox{
+	display: flex;
+	justify-content: space-between;
 
+
+	.contentBox {
+		background-color: #ccc5c5;
+		.boxWidth();
+
+		@media(max-width: 500px) {
+			.mediaBox();
+		}
+
+		h1 {
+			font-family: 'Lobster';
+			.heading();
+			color: @textcolor;
+		}
+
+		.skills {
+			display: flex;
+			flex-direction: column;
+			.paragraph();
+			margin: 1rem;
+			padding: 5rem;
+		}
+
+		li {
+			padding: 1rem;
+			margin: 0 auto;
+		}
+	}
+
+	.skillPic {
+		.boxWidth()
+
+		@media(max-width: 500px) {
+			.mediaBox();
+		}
+	}
+
+	@media(max-width: 500px) {
+		.media();
+	}
+}
 
 

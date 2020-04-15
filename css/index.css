@@ -130,6 +130,32 @@ table {
 * {
   box-sizing: border-box;
 }
+.heading {
+  font-size: 3rem;
+  text-align: center;
+}
+.paragraph {
+  font-family: 'Oswald';
+  font-size: 2rem;
+  text-align: center;
+  padding: 1%;
+}
+.boxWidth {
+  width: 60rem;
+  height: 30rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 6rem;
+}
+.mediaBox {
+  width: 30rem;
+  height: 30rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 3rem;
+}
+.media {
+  display: flex;
+  flex-direction: column;
+}
 @font-face {
   font-family: 'Lobster';
   src: url('/fonts/lobster-regular-webfont.woff2') format('woff2'), url('/fonts/lobster-regular-webfont.woff') format('woff');
@@ -164,9 +190,10 @@ html body {
   color: #a50909;
 }
 .topIntro {
-  width: 50rem;
+  width: 60rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .topIntro .introPic {
   max-width: 50rem;
@@ -175,14 +202,67 @@ html body {
 }
 .topIntro h1 {
   font-family: 'Lobster';
-  font-size: 3rem;
+  font-size: 5rem;
   text-align: center;
   color: #a50909;
   padding: 1%;
 }
 .topIntro p {
   font-family: 'Oswald';
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   padding: 1%;
+  padding-bottom: 10rem;
+  padding-top: 2rem;
+}
+.skillsBox {
+  display: flex;
+  justify-content: space-between;
+}
+.skillsBox .contentBox {
+  background-color: #ccc5c5;
+  width: 60rem;
+  height: 30rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 6rem;
+}
+@media (max-width: 500px) {
+  .skillsBox .contentBox {
+    width: 30rem;
+    height: 30rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem black;
+    border-radius: 3rem;
+  }
+}
+.skillsBox .contentBox h1 {
+  font-family: 'Lobster';
+  font-size: 3rem;
+  text-align: center;
+  color: #a50909;
+}
+.skillsBox .contentBox .skills {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Oswald';
+  font-size: 2rem;
+  text-align: center;
+  padding: 1%;
+  margin: 1rem;
+  padding: 5rem;
+}
+.skillsBox .contentBox li {
+  padding: 1rem;
+  margin: 0 auto;
+}
+.skillsBox .skillPic {
+  width: 60rem;
+  height: 30rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 6rem;
+}
+@media (max-width: 500px) {
+  .skillsBox {
+    display: flex;
+    flex-direction: column;
+  }
 }
