@@ -1,1 +1,456 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.heading {
+  font-size: 3rem;
+  text-align: center;
+}
+.paragraph {
+  font-family: 'Oswald';
+  font-size: 2rem;
+  text-align: center;
+  padding: 1%;
+}
+.boxWidth {
+  width: 60rem;
+  height: 30rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 6rem;
+}
+.mediaBox {
+  width: 30rem;
+  height: 35rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 3rem;
+}
+.media {
+  display: flex;
+  flex-direction: column;
+}
+.boxDisplay {
+  display: flex;
+  justify-content: space-between;
+}
+@font-face {
+  font-family: 'Lobster';
+  src: url('/fonts/lobster-regular-webfont.woff2') format('woff2'), url('/fonts/lobster-regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/oswald-variablefont_wght-webfont.woff2') format('woff2'), url('/fonts/oswald-variablefont_wght-webfont.woff') format('woff');
+}
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 62.5%;
+  background-image: url(/images/james-pond-riEYPSKxoTw-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+html body {
+  width: 90%;
+  margin: 0 auto;
+}
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 3rem;
+  font-family: 'Lobster';
+  line-height: 2rem;
+  margin: 1%;
+}
+.navBar .navLink {
+  text-decoration: none;
+  color: #a50909;
+}
+.topIntro {
+  width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.topIntro .introPic {
+  max-width: 50rem;
+  border-radius: 50rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+}
+.topIntro h1 {
+  font-family: 'Lobster';
+  font-size: 5rem;
+  text-align: center;
+  color: #a50909;
+  padding: 1%;
+}
+.topIntro .personal {
+  font-family: 'Oswald';
+  font-size: 2rem;
+  text-align: center;
+  padding: 1%;
+  padding-bottom: 10rem;
+  padding-top: 2rem;
+}
+@media (max-width: 500px) {
+  .topIntro .introPic {
+    max-width: 30rem;
+    border-radius: 30rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem black;
+  }
+  .topIntro h1 {
+    width: 30rem;
+    text-align: center;
+    font-size: 4rem;
+  }
+  .topIntro .personal {
+    display: none;
+  }
+}
+.skillsBox {
+  display: flex;
+  justify-content: space-between;
+}
+.skillsBox .contentBox {
+  background-color: #ccc5c5;
+  width: 60rem;
+  height: 30rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 6rem;
+}
+@media (max-width: 500px) {
+  .skillsBox .contentBox {
+    width: 30rem;
+    height: 35rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem black;
+    border-radius: 3rem;
+  }
+}
+.skillsBox .contentBox h1 {
+  font-family: 'Lobster';
+  font-size: 3rem;
+  text-align: center;
+  color: #a50909;
+}
+.skillsBox .contentBox .skills {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Oswald';
+  font-size: 2rem;
+  text-align: center;
+  padding: 1%;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.skillsBox .contentBox .button1 {
+  width: 15rem;
+  background-color: #ccc5c5;
+  font-family: 'Oswald';
+  font-size: 2rem;
+  text-align: center;
+  padding: 1%;
+  border: 2px solid #a50909;
+  border-radius: 1.2rem;
+}
+.skillsBox .contentBox .button1:hover {
+  background-color: #a50909;
+  color: white;
+}
+.skillsBox .contentBox li {
+  padding: 1rem;
+  margin: 0 auto;
+}
+.skillsBox .skillPic {
+  width: 60rem;
+  height: 30rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 6rem;
+}
+@media (max-width: 500px) {
+  .skillsBox .skillPic {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 35rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem black;
+    border-radius: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  .skillsBox {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.workBox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15rem;
+}
+.workBox .contentWork {
+  background-color: #ccc5c5;
+  width: 60rem;
+  height: 30rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 6rem;
+}
+@media (max-width: 500px) {
+  .workBox .contentWork {
+    width: 30rem;
+    height: 35rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem black;
+    border-radius: 3rem;
+  }
+}
+.workBox .contentWork h1 {
+  font-family: 'Lobster';
+  font-size: 3rem;
+  text-align: center;
+  color: #a50909;
+}
+.workBox .contentWork .work {
+  text-align: center;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+}
+.workBox .contentWork span {
+  font-family: 'Oswald';
+  color: #7c6d34;
+}
+.workBox .workPic {
+  width: 60rem;
+  height: 30rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 6rem;
+}
+@media (max-width: 500px) {
+  .workBox .workPic {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 35rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem black;
+    border-radius: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  .workBox {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.secQuote {
+  width: 100%;
+  padding-top: 15rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+.secQuote .quote {
+  width: 80rem;
+  height: 50rem;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  border-radius: 8rem;
+}
+@media (max-width: 500px) {
+  .secQuote .quote {
+    width: 40rem;
+    height: 30rem;
+  }
+}
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid #ccc;
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+  resize: vertical;
+  font-family: 'Oswald';
+}
+input[type=submit] {
+  background-color: #a50909;
+  color: white;
+  padding: 1.2rem 2rem;
+  border: none;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.header {
+  padding: 3rem;
+  text-align: center;
+}
+.header h2 {
+  font-family: "Lobster";
+  font-size: 5rem;
+}
+.header p {
+  font-family: 'Oswald';
+  font-size: 2rem;
+  text-align: center;
+  padding: 1%;
+}
+.container {
+  border-radius: 0.5rem;
+  background-color: #ccc5c5;
+  box-shadow: 0.5rem 0.5rem 1.2rem black;
+  padding: 1rem;
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 27rem;
+}
+.container .column {
+  float: left;
+  width: 50%;
+  margin-top: 0.6rem;
+  padding-top: 3rem;
+}
+.container .column img {
+  width: 30rem;
+  height: 50rem;
+}
+@media (max-width: 500px) {
+  .container .column img {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    margin: 0 auto;
+  }
+}

@@ -53,7 +53,332 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+@textcolor: #a50909;
+@shadow: 0.5rem 0.5rem 1.2rem black;
+@boxColor: #ccc5c5;
+.heading {
+	font-size: 3rem;
+	text-align: center;
 }
 
+.paragraph {
+	font-family: 'Oswald';
+	font-size: 2rem;
+	text-align: center;
+	padding: 1%;
+}
+
+.boxWidth {
+	width: 60rem;
+	height: 30rem;
+	box-shadow: @shadow;
+	border-radius: 6rem;
+}
+
+.mediaBox {
+	width: 30rem;
+	height: 35rem;
+	box-shadow: @shadow;
+	border-radius: 3rem;
+}
+
+.media {
+	display: flex;
+	flex-direction: column;
+}
+
+.boxDisplay {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+@font-face {
+	font-family: 'Lobster';
+	src: url('/fonts/lobster-regular-webfont.woff2') format('woff2'), url('/fonts/lobster-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('/fonts/oswald-variablefont_wght-webfont.woff2') format('woff2'), url('/fonts/oswald-variablefont_wght-webfont.woff') format('woff');
+}
+
+
+
+html {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	font-size: 62.5%;
+	background-image: url(/images/james-pond-riEYPSKxoTw-unsplash.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	body {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+.navBar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 3rem;
+	font-family: 'Lobster';
+	line-height: 2rem;
+	margin: 1%;
+
+	.navLink {
+		text-decoration: none;
+		color: @textcolor;
+
+	}
+
+}
+
+.topIntro {
+	width: 60rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	.introPic {
+		max-width: 50rem;
+		border-radius: 50rem;
+		box-shadow: @shadow;
+	  }
+
+	h1 {
+		font-family: 'Lobster';
+		font-size: 5rem;
+		text-align: center;
+		color: @textcolor;
+		padding: 1%;
+	}
+
+	.personal {
+		.paragraph();
+		padding-bottom: 10rem;
+		padding-top: 2rem;
+	}
+
+	@media(max-width: 500px) {
+		.introPic {
+			max-width: 30rem;
+			border-radius: 30rem;
+			box-shadow: @shadow;
+		}
+
+		h1 {
+			width: 30rem;
+			text-align: center;
+			font-size: 4rem;
+		}
+
+		.personal {
+			display: none;
+		}
+	
+	}
+}
+
+.skillsBox{
+	.boxDisplay();
+
+
+	.contentBox {
+		background-color: @boxColor;
+		.boxWidth();
+
+		@media(max-width: 500px) {
+			.mediaBox();
+		}
+
+		h1 {
+			font-family: 'Lobster';
+			.heading();
+			color: @textcolor;
+		}
+
+		.skills {
+			display: flex;
+			flex-direction: column;
+			.paragraph();
+			margin: 1rem;
+			padding: 0.5rem;
+				  
+			
+		}
+
+		.button1 {
+			width: 15rem;
+			background-color: @boxColor; 
+			.paragraph();
+			border: 2px solid @textcolor;
+			border-radius: 1.2rem;
+		  }
+		  
+		  .button1:hover {
+			background-color: @textcolor;
+			color: white;
+		  }
+
+		li {
+			padding: 1rem;
+			margin: 0 auto;
+		}
+	}
+
+	.skillPic {
+		.boxWidth();
+
+		@media(max-width: 500px) {
+			.media();
+			.mediaBox();
+		}
+
+	}
+
+	@media(max-width: 500px) {
+		.media();
+	}
+
+}
+
+.workBox {
+	.boxDisplay();
+	padding-top: 15rem;
+
+	.contentWork {
+		background-color: @boxColor;
+		.boxWidth();
+
+		@media(max-width: 500px) {
+			.mediaBox();
+		}
+
+		h1 {
+			font-family: 'Lobster';
+			.heading();
+			color: @textcolor;
+		}
+
+		.work {
+			text-align: center;
+			font-size: 2.5rem;
+			display: flex;
+			flex-direction: column;
+			padding: 5rem;
+		}
+		
+		span {
+			font-family: 'Oswald';
+			color: #7c6d34
+		}
+	}
+
+	.workPic {
+		.boxWidth();
+
+		@media(max-width: 500px) {
+			.media();
+			.mediaBox();
+		}
+	}
+
+	@media(max-width: 500px) {
+		.media();
+	}
+}
+
+.secQuote {
+	width: 100%;
+	padding-top: 15rem;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 5rem;
+
+	.quote {
+		width: 80rem;
+		height: 50rem;
+		box-shadow: @shadow;
+		border-radius: 8rem;
+
+		@media(max-width: 500px) {
+			width: 40rem;
+			height: 30rem;
+		}
+	}
+}
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 1.2rem;
+	border: 1px solid #ccc;
+	margin-top: 0.6rem;
+	margin-bottom: 1.6rem;
+	resize: vertical;
+	font-family: 'Oswald';
+}
+
+input[type=submit] {
+	background-color: @textcolor;
+	color: white;
+	padding: 1.2rem 2rem;
+	border: none;
+	cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+.header{
+	padding: 3rem;
+	text-align: center;
+
+	h2 {
+		font-family: "Lobster";
+		font-size: 5rem;
+	}
+
+	p {
+		.paragraph();
+	}
+}
+
+.container {
+	border-radius: 0.5rem;
+	background-color: @boxColor;
+	box-shadow: @shadow;
+	padding: 1rem;
+	width: 60%;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 0 27rem;
+
+
+	.column {
+		float: left;
+		width: 50%;
+		margin-top: 0.6rem;
+		padding-top: 3rem;
+
+		img {
+			width: 30rem;
+			height: 50rem;
+
+			@media(max-width: 500px){
+				display: none;
+			}
+		}
+	}
+
+	@media (max-width: 500px){
+		margin: 0 auto;
+	}
+
+}
